@@ -4,6 +4,7 @@ library(ggplot2)
 library(gridExtra)
 library(dplyr)
 
+# Serie storica Petrolio Greggio 
 
 pg = read.csv("futurepg.csv", header=T)
 pg
@@ -17,8 +18,6 @@ pg <- pg %>%
 
 media_p = mean(brent$close)
 str(brent)
-
-
 
 # Conversione della colonna 'Date' in formato data
 brent$Date <- as.Date(brent$Date)
