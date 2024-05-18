@@ -5,3 +5,6 @@
 !README.md
 !*.pptx
 !*.tex
+!*.R
+!*.bib
+!*.csv
