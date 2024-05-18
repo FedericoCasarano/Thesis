@@ -1,0 +1,5 @@
+Nel contesto finanziario globale, le opzioni hanno guadagnato l'attenzione di investitori e ricercatori per la loro complessità e versatilità. I derivati offrono opportunità cruciali per la gestione del rischio e la speculazione, elementi fondamentali per le moderne strategie di investimento. Con l'evoluzione dei mercati finanziari, l'aumento della volatilità e la crescente complessità delle soluzioni innovative, è diventato essenziale sviluppare modelli matematici avanzati per una valutazione accurata delle opzioni.
+
+Questa tesi esplora dettagliatamente il campo dei derivati finanziari, focalizzandosi su tre tipologie specifiche: le opzioni Asiatiche, le opzioni Barriera e le opzioni Lookback. L'obiettivo principale è analizzare, valutare e confrontare diversi approcci matematici e computazionali per la determinazione del prezzo di queste opzioni e discutere le implicazioni pratiche per gli investitori e le strategie di gestione del rischio.
+
+Questa analisi contribuisce a una comprensione approfondita delle soluzioni innovative e delle strategie di gestione del rischio nei mercati energetici e finanziari.
