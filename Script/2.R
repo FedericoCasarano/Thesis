@@ -18,4 +18,3 @@ cat("Probabilità di non conformità per Cp = 0.67:", prob_Cp_0.67, "\n")
 cat("Probabilità di non conformità per Cp = 1:", 1 - prob_Cp_1, "\n")
 cat("Probabilità di non conformità per Cp = 2:", 1 - prob_Cp_2, "\n")
 
-?pnorm
