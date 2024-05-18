@@ -8,3 +8,5 @@
 !*.R
 !*.bib
 !*.csv
+!*.png
+!*.jpeg
