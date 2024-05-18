@@ -23,7 +23,7 @@ library(gridExtra)
 # Converto la colonna 'Date' in formato data
 brent$Data <- as.Date(brent$Data)
 
-# Creo il primo grafico con l'asse y a destra (da 65 a 100)
+# Creo il primo grafico 
 grafico1 <- ggplot(data = brent, aes(x = Data, y = Ultimo)) +
   geom_line(color = "blue") +
   labs(x = "", y = NULL, title = "") +
@@ -34,7 +34,7 @@ grafico1 <- ggplot(data = brent, aes(x = Data, y = Ultimo)) +
     sec.axis = sec_axis(~., name = "", breaks = seq(65, 100, by = 10))
   )
 
-# Creo il secondo grafico con l'asse y a destra (da 65 a 100) e senza l'asse y di sinistra
+# Creo il secondo grafico 
 grafico2 <- ggplot(data = brent, aes(x = Data, y = Ultimo)) +
   geom_line(color = "red") +
   labs(x = "", y = NULL, title = NULL) +
@@ -50,7 +50,8 @@ grid.arrange(grafico1, grafico2, ncol = 1, heights = c(3, 1))
 
 
 
-########## LOOOOOOOOOkBACK 
+########## LOOKBACK OPTION
+
 MonteCarloELC <- function(sigma, S0, r, T, q, n, N) {
   # Parametri
   S0 <- 90
@@ -84,13 +85,7 @@ MonteCarloELC <- function(sigma, S0, r, T, q, n, N) {
 result <- MonteCarloELC(0.25, 90, 0.03, 0.5, 0, 180, 10000)
 print(result)
 
-
-
-
-
-
-
-
+######## ASIAN OPTION
 
 # Parametri dell'opzione asiatica
 S0 <- 90         # Prezzo iniziale dell'attività sottostante
@@ -164,15 +159,6 @@ ggplot(df_values, aes(x = S_i1)) +
 result2<-MCAsianCall(S0, K, T, r, sigma, N, q)
 
 
-
-
-
-
-
-
-
-
-
 # Crea un dataframe per il grafico di dispersione
 df2 <- data.frame(Simulazioni = 1:N, Risultati = replicate(N, MCAsianCall(S0, K, T, r, sigma, 1, q)))
 
@@ -184,31 +170,6 @@ scatter_plot <- ggplot(data = df2, aes(x = Simulazioni, y = Risultati)) +
 
 # Mostra il grafico
 print(scatter_plot)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # Calcolo dell'Asian Option attraverso il modello di Vorst
@@ -263,9 +224,6 @@ n <- 180
 AsianCall <- AC(sigma, S0, X, r, T, q, n)
 cat("Il valore dell'opzione asiatica è:", AsianCall)
 
-
-
-
 # Creazione del dataframe per il grafico
 df <- data.frame(
   Method = rep(c("Black-Scholes", "Monte Carlo"), each = N),
@@ -280,18 +238,6 @@ ggplot(data = df, aes(x = Method, y = OptionPrice, fill = Method)) +
     x = "Metodo",
     y = "Prezzo dell'Opzione Asiatica"
   )
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -502,19 +448,12 @@ df <- data.frame(
   Vorst = results[, 2]
 )
 
-# (Continua con la creazione dei grafici come nell'esempio precedente)
-
-######################## GAS
 
 
 gas <- read.csv("Gasnaturale.csv", header=T, dec=",")
 gas
 
 
-# Supponendo che 'gas' sia il tuo datafram
-
-
-# Funzione per mappare le abbreviazioni italiane in inglese
 map_abbreviations <- function(text) {
   italian_abbreviations <- c("gen", "feb", "mar", "apr", "mag", "giu", "lug", "ago", "set", "ott", "nov", "dic")
   english_abbreviations <- c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
@@ -524,7 +463,6 @@ map_abbreviations <- function(text) {
   return(text)
 }
 
-# Mappa le abbreviazioni italiane in inglese nella colonna "Data"
 gas$Data <- map_abbreviations(gas$Data)
 
 # Trasforma la variabile "Data" in formato Data (con mese in inglese)
@@ -546,14 +484,14 @@ gas_filtrato <- gas %>%
 library(ggplot2)
 library(gridExtra)
 
-# Creo il primo grafico con l'asse y a destra (da 65 a 100)
+# Creo il primo grafico 
 grafico1 <- ggplot(data = gas_filtrato, aes(x = Data, y = Chiusura.)) +
   geom_line(color = "blue") +
   labs(x = "", y = NULL, title = "") +
   theme_minimal() 
 
 
-# Creo il secondo grafico con l'asse y a destra (da 65 a 100) e senza l'asse y di sinistra
+# Creo il secondo grafico 
 grafico2 <- ggplot(data = gas_filtrato, aes(x = Data, y = Chiusura.)) +
   geom_line(color = "red") +
   labs(x = "", y = NULL, title = NULL) +
@@ -642,10 +580,6 @@ MCDaiOp <- function(S0, K, T, r, sigma, N, q, H, R) {
 result <- MCDaiOp(2.70, 2.65, 0.5, 0.03, 0.83, 10000, 0, 2, 0.05)
 print(result)
 
-
-
-
-
 # Simula i sentieri dei prezzi S per MCDaiOp
 S_simulated_daiop <- simulatePaths(2.75, 0.5, 0.03, 0.38, 10000, 0)
 
@@ -677,45 +611,6 @@ scatter_plot <- ggplot(data = df2, aes(x = Simulazioni, y = Risultati)) +
 
 # Mostra il grafico di dispersione
 print(scatter_plot)
-
-############
-
-gas <- read.csv("Gasnaturale.csv", header=T, dec=",")
-gas
-
-
-# Supponendo che 'gas' sia il tuo datafram
-
-
-# Funzione per mappare le abbreviazioni italiane in inglese
-map_abbreviations <- function(text) {
-  italian_abbreviations <- c("gen", "feb", "mar", "apr", "mag", "giu", "lug", "ago", "set", "ott", "nov", "dic")
-  english_abbreviations <- c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
-  for (i in 1:length(italian_abbreviations)) {
-    text <- gsub(paste0("\\b", italian_abbreviations[i], "\\b"), english_abbreviations[i], text)
-  }
-  return(text)
-}
-
-# Mappa le abbreviazioni italiane in inglese nella colonna "Data"
-gas$Data <- map_abbreviations(gas$Data)
-
-# Trasforma la variabile "Data" in formato Data (con mese in inglese)
-gas$Data <- as.Date(gas$Data, format = "%d %b %Y", locale = "C")
-
-
-
-str(gas)
-
-# Carica la libreria dplyr
-library(dplyr)
-
-# Calcola i rendimenti giornalieri e crea la colonna Rendimenti_giornalieri
-gas <- gas %>%
-  mutate(Rendimenti_giornalieri = (Chiusura.aggiustata.. - lag(Chiusura.aggiustata..))/lag(Chiusura.aggiustata..))
-
-# Calcola la volatilità annua in percentuale
-volatilita_annua_percentuale <- sqrt(252) * sd(gas$Rendimenti_giornalieri, na.rm = TRUE) 
 
 
 
@@ -837,7 +732,6 @@ result <- MCDownAndOutC(2.7, 2.65, 0.0833333, 0.03, 0.23, 10000, 0, 2)
 print(result)
 
 
-###############à LOOOOOOOOOkBACK
 MonteCarloFLP <- function(sigma, S0, r, T, q, n, M) {
   # Parametri
   S0 <- 2.7
@@ -965,13 +859,6 @@ cat("Il valore stimato della put floating lookback option è:",result, "\n")
 
 
 
-
-
-
-
-
-
-
 MonteCarloFloatingLookbackPut <- function(sigma, S0, r, T, q, n, N) {
   # Parametri
   tau <- T / n
@@ -1012,16 +899,7 @@ N <- 10000
 result <- MonteCarloFloatingLookbackPut(sigma, S0, r, T, q, n, N)
 cat("Il valore stimato della put floating lookback option è:", result, "\n")
 
-
-
-
-
-
-
-
-
-
-MonteCarloFixedLookbackCall <- function(sigma, S0, r, T, q, n, N, K) {
+dLookbackCall <- function(sigma, S0, r, T, q, n, N, K) {
   # Parametri
   tau <- T / n
   S <- matrix(0, n + 1, N)
