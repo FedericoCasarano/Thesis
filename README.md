@@ -11,11 +11,10 @@ Il terzo capitolo si concentra sulla modellizzazione dei prezzi energetici, al f
 
 Il quarto capitolo di questa tesi costituisce un’analisi approfondita delle opzioni Asiatiche, delle opzioni Barriera e delle opzioni Lookback. Questi specifici contratti rivestono un ruolo tanto fondamentale quanto moderno, sia nel panorama finanziario che in quello energetico. Nel corso di questo capitolo, esploreremo le caratteristiche uniche di ciascuno di questi strumenti, analizzando le complesse formule di payoff e i modelli matematici utilizzati per valutarli con precisione. Inoltre, verrà data un’oc- chiata al contesto dei mercati energetici in cui queste opzioni trovano applicazione, tenendo conto delle specifiche sfumature di ciascun settore. La conoscenza acquisita in questo capitolo contribuirà a una comprensione più dettagliata delle soluzioni innovative e delle strategie di gestione del rischio in questi specifici contesti.
 
-<img width="961" alt="Screenshot 2024-05-18 alle 16 37 33" src="https://github.com/FedericoCasarano/Thesis/assets/149302051/bda0b2a4-3ca9-4381-9677-9f65b720e1ba">
+<img width="947" alt="Screenshot 2024-05-18 alle 16 41 30" src="https://github.com/FedericoCasarano/Thesis/assets/149302051/aecb1c56-50e9-427e-a1b4-16e92380642f">
 
 Nel quinto capitolo, esploreremo in profondità una delle principali metodologie di valutazione e la sua applicazione nel contesto energetico, con un focus partico- lare sulle opzioni finanziarie. Questo capitolo sarà il culmine del nostro lavoro, in quanto fornirà spunti concreti sulla valutazione delle opzioni precedentemente pre- sentate. Attraverso esempi pratici, ci immergeremo nella simulazione Monte Carlo, una potente metodologia che rivelerà il suo potenziale nel fornire stime affidabili e basate su dati reali. Questa analisi consentirà di acquisire una visione chiara e stra- tegica nel complesso panorama dei mercati energetici e finanziari, aprendo la strada a un’approfondita esplorazione di questo affascinante mondo finanziario.
 
-<img width="942" alt="Screenshot 2024-05-18 alle 16 39 02" src="https://github.com/FedericoCasarano/Thesis/assets/149302051/3993a652-145f-4313-8d52-e7b270f552d9">
-
+<img width="947" alt="Screenshot 2024-05-18 alle 16 44 27" src="https://github.com/FedericoCasarano/Thesis/assets/149302051/9e2c941b-31d0-4a91-a227-79f8764d1bbb">
 
 
