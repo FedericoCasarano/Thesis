@@ -1,3 +1,6 @@
+
+# GESTIONE E PRICING DI DERIVATI ENERGETICI: MODELLI E APPLICAZIONI PER LA VALUTAZIONE E LA COPERTURA DEI RISCHI AZIENDALI
+
 # Introduzione
 
 Nel panorama finanziario globale, le opzioni hanno da tempo attirato l’attenzione degli investitori e dei ricercatori per la loro complessità e versatilità. Gli strumen- ti derivati offrono opportunità di gestione del rischio e di speculazione, che sono fondamentali per le moderne strategie di investimento. L’evoluzione dei mercati fi- nanziari, l’incremento della volatilità e la crescente complessità delle soluzioni inno- vative in ambito economico, hanno reso cruciale lo sviluppo di modelli matematici avanzati per analizzare in modo accurato il valore delle opzioni.
